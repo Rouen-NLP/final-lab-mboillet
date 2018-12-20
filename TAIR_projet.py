@@ -7,12 +7,12 @@ Created on Thu Nov  8 15:31:00 2018
 """
 
 import os
-import numpy as np
+#import numpy as np
 import matplotlib.pyplot as plt
 from sklearn.model_selection import train_test_split
 from sklearn.feature_extraction.text import CountVectorizer, TfidfTransformer
 from sklearn.naive_bayes import MultinomialNB
-from sklearn.metrics import classification_report, confusion_matrix
+#from sklearn.metrics import classification_report, confusion_matrix
 
 #%% 1. Stockage des fichiers texte et de leurs contenus dans des dictionnaires.
 
@@ -147,16 +147,16 @@ def train_test(x_train: list, x_dev: list, x_test: list,
 #%% 5. Error analysis
 
 # Classification report.
-def error_analysis(categories: list, predict: list, names: str):
-    """
-    Compute the classification report for the train, dev or test data set.
-    :param y: The categories of the data.
-    :param X_dev: The predicted categories of the data.
-    :param X_test: The name of the data set.
-    """
-    for index, category in enumerate(categories):
-        print("\nScores per class "+names[index]+" :")
-        print(classification_report(category, predict[index]))
+#def error_analysis(categories: list, predict: list, names: str):
+#    """
+#    Compute the classification report for the train, dev or test data set.
+#    :param y: The categories of the data.
+#    :param X_dev: The predicted categories of the data.
+#    :param X_test: The name of the data set.
+#    """
+#    for index, category in enumerate(categories):
+#        print("\nScores per class "+names[index]+" :")
+#        print(classification_report(category, predict[index]))
 
 #%% Main
 
@@ -190,22 +190,22 @@ if __name__ == '__main__':
     TF_RESULTS = [TRAIN_PREDICT, DEV_PREDICT, TEST_PREDICT]
 
     # Error analysis.
-    error_analysis([Y_TRAIN, Y_DEV, Y_TEST],
-                   [BOW_RESULTS[0], BOW_RESULTS[1], BOW_RESULTS[2]],
-                   ['Train', 'Dev', 'Test'])
-
-    _, [AX1, AX2, AX3] = plt.subplots(1, 3, figsize=(10, 5))
-    AX1.set_title("Confusions Train\n")
-    AX1.matshow(confusion_matrix(Y_TRAIN, BOW_RESULTS[0]))
-    AX1.set_yticks(range(len(np.unique(Y))))
-    AX1.set_yticklabels(np.unique(Y))
-    AX1.set_xticks([])
-    AX2.set_title("Confusions Dev\n")
-    AX2.matshow(confusion_matrix(Y_DEV, BOW_RESULTS[1]))
-    AX2.set_yticks([])
-    AX2.set_xticks([])
-    AX3.set_title("Confusions Test\n")
-    AX3.matshow(confusion_matrix(Y_TEST, BOW_RESULTS[2]))
-    AX3.set_yticks([])
-    AX3.set_xticks([])
-    plt.show(block=True)
+#    error_analysis([Y_TRAIN, Y_DEV, Y_TEST],
+#                   [BOW_RESULTS[0], BOW_RESULTS[1], BOW_RESULTS[2]],
+#                   ['Train', 'Dev', 'Test'])
+#
+#    _, [AX1, AX2, AX3] = plt.subplots(1, 3, figsize=(10, 5))
+#    AX1.set_title("Confusions Train\n")
+#    AX1.matshow(confusion_matrix(Y_TRAIN, BOW_RESULTS[0]))
+#    AX1.set_yticks(range(len(np.unique(Y))))
+#    AX1.set_yticklabels(np.unique(Y))
+#    AX1.set_xticks([])
+#    AX2.set_title("Confusions Dev\n")
+#    AX2.matshow(confusion_matrix(Y_DEV, BOW_RESULTS[1]))
+#    AX2.set_yticks([])
+#    AX2.set_xticks([])
+#    AX3.set_title("Confusions Test\n")
+#    AX3.matshow(confusion_matrix(Y_TEST, BOW_RESULTS[2]))
+#    AX3.set_yticks([])
+#    AX3.set_xticks([])
+#    plt.show(block=True)
