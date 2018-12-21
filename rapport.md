@@ -71,4 +71,27 @@ L'implémentation de cet algorithme se trouve dans le fichier ![TAIR_projet.py](
 
 ## 3. Analyse des performances.
 
+### 3.1 Performances
 Après application de cet algorithme, nous obtenons les résultats suivants :
+
+![BoW](/images_rapport/bow.PNG)
+
+Nous pouvons voir que les résultats sont satisfaisants avec la simple représentation en sac de mots.
+
+POURQUOI :
+Afin d'améliorer ces résultats, nous avons testé de représenter les données en TF-IDF. Avec cette nouvelle représentation, nous obtenons les résultats suivants :
+
+![TF-IDF](/images_rapport/tfidf.PNG)
+
+Les résultats obtenus ne sont pas plus satisfaisants que les premiers. En effet, nous perdons environ 5% de précision avec celle nouvelle représentation. Cela est probablement dû à ...
+
+### 3.2 Analyse des erreurs
+
+La dernière étape à réaliser ici est d'analyser nos résultats et les erreurs. Cela devra permettre d'améliorer, plus tard, les résultats en passant par une possible correction des données ou un autre algorithme de classification.
+
+Pour faire cette analyse, nous avons décider de calculer les erreurs de classification en fonction des catégories des documents. Nous obtenons l'analyse suivante pour l'ensemble de tests :
+
+![Scores](/images_rapport/scores_test.PNG)
+
+
+## Conclusion + pistes d'amélioration 
