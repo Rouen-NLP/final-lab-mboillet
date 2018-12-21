@@ -123,7 +123,7 @@ Un traitement spécial sur ces données devrait donc être réalisé au préalab
 
 Nous avons également choisi de calculer la matrice de confusion pour l'ensemble de test. Cela nous permet de voir quelles catégories sont le plus souvent confondues. La matrice obtenue est présentée ci-dessous :
 
-IMAGE
+![Confusion](/images_rapport/confusion.png)
 
 Nous voyons sur cette matrice que les catégories (_Memo_ et _Letter_) et (_Scientific_ et _Report_) sont souvent confondues. Cela n'est pas étonnant sachant que chacun de ces couples possède ont un nombre similaire de textes et les textes ont des longueurs similaires. De plus, la catégorie _Note_ est souvent confondue avec d'autres catégories, cela n'est pas non plus surprenant au vu de son faible _f1-score_. Enfin, on note la confusion entre les catégories (_Scientific_ et _Form_) et (_Report_ et _Memo_). Cela est inattendu car ces documents semblent être de types totalement différents et que les catégories ne sont pas similairement représentées.
 
