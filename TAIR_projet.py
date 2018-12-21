@@ -179,15 +179,15 @@ if __name__ == '__main__':
 
     # Train and test.
     # Bag of words representation.
-    print("\nBag-of-word representation :")
+    print("\nBag-of-word representation results :")
     TRAIN_PREDICT, DEV_PREDICT, TEST_PREDICT = train_test(X_TRAIN_COUNTS, X_DEV_COUNTS,
                                                           X_TEST_COUNTS, Y_TRAIN, Y_DEV, Y_TEST)
-    BOW_RESULTS = [TRAIN_PREDICT, DEV_PREDICT, TEST_PREDICT]
+#    BOW_RESULTS = [TRAIN_PREDICT, DEV_PREDICT, TEST_PREDICT]
     # TF-IDF representation.
-    print("\nTF-IDF representation :")
-    TRAIN_PREDICT, DEV_PREDICT, TEST_PREDICT = train_test(X_TRAIN_TF, X_DEV_TF,
-                                                          X_TEST_TF, Y_TRAIN, Y_DEV, Y_TEST)
-    TF_RESULTS = [TRAIN_PREDICT, DEV_PREDICT, TEST_PREDICT]
+#    print("\nTF-IDF representation :")
+#    TRAIN_PREDICT, DEV_PREDICT, TEST_PREDICT = train_test(X_TRAIN_TF, X_DEV_TF,
+#                                                          X_TEST_TF, Y_TRAIN, Y_DEV, Y_TEST)
+#    TF_RESULTS = [TRAIN_PREDICT, DEV_PREDICT, TEST_PREDICT]
 
     # Error analysis.
 #    error_analysis([Y_TRAIN, Y_DEV, Y_TEST],
