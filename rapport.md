@@ -67,7 +67,7 @@ Début:
 Fin.
 ```
 
-L'implémentation de cet algorithme se trouve dans le fichier ![TAIR_projet.py](/TAIR_projet.py). Une version de ce code est également disponible dans le document ![TAIR_projet.ipynb](/TAIR_projet.ipynb).
+L'implémentation de cet algorithme se trouve dans le fichier ![tair_projet.py](/tair_projet.py). Une version de ce code est également disponible dans le document ![tair_projet.ipynb](/tair_projet.ipynb).
 
 ## 3. Analyse des performances.
 
