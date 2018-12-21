@@ -108,14 +108,27 @@ Dy Thaveel J Er lense
 SpZSLrsSOSe
 ```
 
-Il n'y a aucun texte anglais dans ce document qui puisse être utile à notre modèle. De nombreux textes classés comme _Note_ ne contiennent pas de texte mais seulement des références, dates ou numéros. Ainsi, nous garderons notre premier algorithm avec les sac de mots.
+Il n'y a aucun texte anglais dans ce document qui puisse être utile à notre modèle. De nombreux textes classés comme _Note_ ne contiennent pas de texte mais seulement des références, dates ou numéros. Ainsi, nous garderons notre premier algorithme avec les sacs de mots.
 
 ### 3.2 Analyse des erreurs
 
-La dernière étape à réaliser ici est d'analyser nos résultats et les erreurs. Cela devra permettre d'améliorer, plus tard, les résultats en passant par une possible correction des données ou un autre algorithme de classification.
+La dernière étape à réaliser ici est d'analyser nos résultats et les erreurs. Cela devra permettre d'améliorer, plus tard, les résultats en passant par une possible correction des données, un changement des paramètres ou un autre algorithme de classification.
 
-Pour faire cette analyse, nous avons décider de calculer les erreurs de classification en fonction des catégories des documents. Nous obtenons l'analyse suivante pour l'ensemble de tests :
+Pour faire cette analyse, nous avons décidé de calculer les erreurs de classification en fonction des catégories des documents. Nous obtenons l'analyse suivante pour l'ensemble de tests :
 
 ![Scores](/images_rapport/scores_test.PNG)
 
+Nous voyons que les catégories _Resume_ et _Email_ se distinguent clairement des autres par leurs _f1-score_ très élevés. En effet, pour ces catégories, nous avons plus de 93% de textes correctement classifiés. Cependant, nous constatons également que la catégorie _Note_ a un _f1-score_ particulièrement bas (< 40%). Cela est probablement dû au fait que ces données ne sont pas de très bonne qualité comme énoncé précédemment.
+Un traitement spécial sur ces données devrait donc être réalisé au préalable afin de corriger ce résultat.
+
+Nous avons également choisi de calculer la matrice de confusion pour l'ensemble de test. Cela nous permet de voir quelles catégories sont le plus souvent confondues. La matrice obtenue est présentée ci-dessous :
+
+IMAGE
+
+Nous voyons sur cette matrice que les catégories (_Memo_ et _Letter_) et (_Scientific_ et _Report_) sont souvent confondues. Cela n'est pas étonnant sachant que chacun de ces couples possède ont un nombre similaire de textes et les textes ont des longueurs similaires. De plus, la catégorie _Note_ est souvent confondue avec d'autres catégories, cela n'est pas non plus surprenant au vu du faible _f1-score_. Enfin, on note la confusion entre les catégories (_Scientific_ et _Form_) et (_Report_ et _Memo_). Cela est davantage inattendu car ils semblent être des types de documents totalement différents et que les catégories ne sont pas similairement représentées.
+
 ## Conclusion + pistes d'amélioration 
+
+Pour conclure, l'analyse de documents automatique est donc un sujet complexe où la qualité des données influe beaucoup sur les résultats. L'algorithme choisi ici donne des performances satisfaisantes mais elles peuvent être améliorés. En effet, nous avons des confusions que nous ne pouvons pas forcément expliquer. Il faudrait peut-être utiliser une autre représentation des documents et effectuer un pré-traitement sur les données afin de les uniformiser et de corriger les données _Memo_. De plus, nous n'avons pas cherché les hyper-paramètres optimaux pour notre algorithme. Nous aurions pû les chercher et recalculer les performances par la suite.
+
+L
